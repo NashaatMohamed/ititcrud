@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CrudController;
+use Illuminate\Support\Facades\auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,16 @@ Route::get('/', function () {
 });
 
 
-Route::resource('crud',CrudController::class);
+Route::resource('crud',CrudController::class)->middleware('auth');
+
+
+
+
+
+
 Route::get('test',function(){
-    return Auth::id();
+   // return Auth::id();
+   return auth::user()->name;
 });
 
 Route::get('/dashboard', function () {

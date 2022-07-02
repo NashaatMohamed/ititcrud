@@ -12,6 +12,9 @@
     <label for="exampleInputEmail1" class="form-label">Your phone</label>
     <input type="text" name = 'phone' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  @foreach ($errors->all() as $error)
+         <div>{{$error}}</div>
+     @endforeach  
+     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 @endsection

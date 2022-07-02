@@ -18,6 +18,10 @@
                 <x-nav-link href="{{ route('crud.create') }}" :active="request()->routeIs('dashboard')">
                     {{ __('new Phone') }}
                 </x-nav-link>
+
+                <x-nav-link href="{{ route('crud.index') }}" :active="request()->routeIs('dashboard')">
+                    {{ __('All Phone') }}
+                </x-nav-link>
             </ul>
 
             <!-- Right Side Of Navbar -->

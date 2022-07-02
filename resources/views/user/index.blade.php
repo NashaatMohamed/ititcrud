@@ -8,7 +8,12 @@
 <table class="table">
   <thead>
     <tr>
+      <th scope="col">id</th>
       <th scope="col">phones</th>
+      <th scope="col">delete</th>
+      <th scope="col">update</th>
+      <th scope="col">show</th>
+      <th scope="col">ownerPhone</th>
     </tr>
   </thead>
   <tbody>
@@ -25,6 +30,7 @@
         </form>
     </td>
     <td><a href = "{{route('crud.show',$phone->id)}}"><button type="button" class="btn btn-success">show</button></a></td>
+    <td><div class="text-danger">{{$phone->user->name}}</div></td>
     </tr>
     @endforeach
   </tbody>
